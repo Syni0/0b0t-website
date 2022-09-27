@@ -95,6 +95,12 @@
   width: 100%;
 }
 
+.hint {
+  font-size: 12px;
+  font-style: italic;
+  line-height: 1;
+}
+
 @keyframes bounce {
   0% {
     transform: translateY(0%);
