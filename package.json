@@ -1,0 +1,39 @@
+{
+  "name": "0b0.com",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "start": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:0b0t-pages/homepage.git"
+  },
+  "author": "Synio",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "clear": "^0.1.0",
+    "gulp": "^4.0.0",
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-debug": "^4.0.0",
+    "gulp-notify": "^4.0.0",
+    "gulp-rename": "^1.4.0",
+    "sass": "^1.51.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-sass-glob": "^1.0.9",
+    "gulp-sourcemaps": "^2.6.4",
+    "stylelint": "^14.0.1",
+    "stylelint-config-standard": "^23.0.0",
+    "stylelint-order": "^5.0.0"
+  },
+  "dependencies": {
+    "postcss": "^8.4.12",
+    "postcss-scss": "^4.0.2",
+    "prettier": "^2.4.1",
+    "stylelint-config-standard-scss": "^2.0.1",
+    "stylelint-prettier": "^1.2.0",
+    "stylelint-scss": "^4.0.0"
+  }
+}

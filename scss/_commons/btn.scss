@@ -1,0 +1,28 @@
+.btn {
+  background-color: color(button);
+  border: 0;
+  border-radius: default(radius, button);
+  color: color(button, text);
+  font-weight: bold;
+  padding: 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all 0.2s ease-in-out;
+
+  &:hover,
+  &:focus {
+    background-color: color(button, hover);
+  }
+
+  &.large {
+    padding: 16px;
+  }
+}
+
+.scale {
+  transition: all 0.2s ease-in-out;
+
+  &:active {
+    transform: scale(0.95);
+  }
+}

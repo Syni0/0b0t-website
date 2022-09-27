@@ -1,0 +1,86 @@
+.block {
+  background-color: color(background, base);
+  border-radius: default(radius);
+  height: calc(100% - 20px);
+  margin-top: 20px;
+  overflow: hidden;
+
+  &.header {
+    overflow: visible;
+    position: relative;
+  }
+
+  &-column {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &-bg {
+    /* stylelint-disable-next-line prettier/prettier */
+    background-image:
+      linear-gradient(
+        to right,
+        rgba(0, 0, 0, 60%),
+        rgba(0, 0, 0, 10%)
+      ),
+      url("../img/spawn-370-banner.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    justify-content: center;
+
+    @media (min-width: $sm-width) {
+      justify-content: space-between;
+    }
+
+    .btn {
+      align-self: center;
+    }
+  }
+
+  &-discord {
+    background-color: color(background, discord);
+    display: block;
+    font-size: 14px;
+    min-width: 250px;
+    text-decoration: none;
+
+    &-logo {
+      width: 160px;
+    }
+
+    .flex {
+      align-items: center;
+      flex-wrap: nowrap;
+
+      svg {
+        display: inline-block;
+        fill: color(mono, light);
+        width: 32px;
+      }
+    }
+
+    .discord-members {
+      display: block;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    &:hover,
+    &:focus {
+      .flex {
+        svg {
+          animation: bounce 2s ease;
+        }
+      }
+    }
+  }
+
+  &-promotion {
+    background-image: url("../img/promotion.png");
+    background-position: center;
+    background-size: cover;
+    height: calc(100% - 20px);
+  }
+}

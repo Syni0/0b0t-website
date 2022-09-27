@@ -1,0 +1,235 @@
+@use "sass:map";
+
+.ctn,
+.ctn-small {
+  margin-left: auto;
+  margin-right: auto;
+
+  // padding de base (first breakpoint)
+  padding-left: break(xxs, gutter-ctn);
+  padding-right: break(xxs, gutter-ctn);
+}
+
+.flex,
+.col,
+.row {
+  box-sizing: border-box;
+  display: flex;
+  flex: 0 0 auto;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.row {
+  flex-direction: row;
+}
+
+.row.reverse {
+  flex-direction: row-reverse;
+}
+
+.col {
+  flex-direction: column;
+}
+
+.col.reverse {
+  flex-direction: column-reverse;
+}
+
+.wrap {
+  flex-wrap: wrap;
+}
+
+.nowrap {
+  flex-wrap: nowrap;
+}
+
+@mixin flex-styles($breakpoint, $data, $gutter) {
+  $container: map.get($data, container);
+  $container-small: map.get($data, container-small);
+  $gutter: map.get($data, gutter);
+  $gutter-ctn: map.get($data, gutter-ctn);
+
+  .ctn-fluid,
+  .ctn,
+  .ctn-small {
+    padding-left: #{$gutter-ctn};
+    padding-right: #{$gutter-ctn};
+  }
+
+  .ctn,
+  .container {
+    width: $container;
+  }
+
+  .ctn-small {
+    width: $container-small;
+  }
+
+  .row,
+  .col {
+    margin-left: -#{calc($gutter / 2)};
+    margin-right: -#{calc($gutter / 2)};
+
+    &::before,
+    &::after {
+      content: none;
+    }
+  }
+
+  .row-#{$breakpoint} {
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 auto;
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
+
+  .col-#{$breakpoint} {
+    flex-direction: column;
+  }
+
+  @for $i from 1 through $grid-columns {
+    .#{$breakpoint}#{$i},
+    .offset-#{$breakpoint}#{$i},
+    .col-#{$breakpoint}-#{$i} {
+      @extend %flex-global-styles-#{$breakpoint};
+    }
+    .#{$breakpoint}#{$i},
+    .col-#{$breakpoint}-#{$i} {
+      flex-basis: #{$column-width * $i + "%"};
+      max-width: #{$column-width * $i + "%"};
+    }
+    .col-#{$breakpoint}-#{$i} {
+      float: none;
+    }
+    .offset-#{$breakpoint}#{$i} {
+      margin-left: #{$column-width * $i + "%"};
+    }
+  }
+
+  .#{$breakpoint} {
+    flex-basis: 0;
+    flex-grow: 1;
+    max-width: 100%;
+    padding-left: #{calc($gutter / 2)};
+    padding-right: #{calc($gutter / 2)};
+  }
+
+  .start-#{$breakpoint} {
+    justify-content: flex-start;
+    text-align: start;
+  }
+
+  .center-#{$breakpoint} {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .end-#{$breakpoint} {
+    justify-content: flex-end;
+    text-align: end;
+  }
+
+  .around-#{$breakpoint} {
+    justify-content: space-around;
+  }
+
+  .between-#{$breakpoint} {
+    justify-content: space-between;
+  }
+
+  .top-#{$breakpoint} {
+    align-items: flex-start;
+    align-self: start;
+  }
+
+  .middle-#{$breakpoint} {
+    align-items: center;
+    align-self: center;
+  }
+
+  .bottom-#{$breakpoint} {
+    align-items: flex-end;
+    align-self: end;
+  }
+
+  .first-#{$breakpoint} {
+    order: -1;
+  }
+
+  .last-#{$breakpoint} {
+    order: 1;
+  }
+
+  .hide-#{$breakpoint},
+  .hidden-#{$breakpoint} {
+    display: none;
+  }
+
+  .show-#{$breakpoint} {
+    display: block;
+  }
+
+  .show-ib-#{$breakpoint} {
+    display: inline-block;
+  }
+
+  %flex-global-styles-#{$breakpoint} {
+    box-sizing: border-box;
+    padding-left: #{calc($gutter / 2)};
+    padding-right: #{calc($gutter / 2)};
+  }
+}
+
+@each $breakpoint, $data in $breakpoints {
+  $min-width: map.get($data, min-width);
+  $gutter: map.get($data, gutter);
+
+  @if $min-width {
+    @media (min-width: $min-width) {
+      @include flex-styles($breakpoint, $data, $gutter);
+    }
+    /* stylelint-disable-next-line at-rule-empty-line-before */
+  } @else {
+    @include flex-styles($breakpoint, $data, $gutter);
+  }
+}
+
+/* fix padding xxs */
+@media (min-width: $sm-width) {
+  .xxs12,
+  .xxs6 {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .xs {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+.nogrow {
+  flex-basis: auto;
+  flex-grow: 0;
+}
+
+.grow {
+  flex-basis: 0;
+  flex-grow: 1;
+}
+
+@for $i from 1 through 5 {
+  .grow#{$i} {
+    flex-basis: auto;
+    flex-grow: #{$i};
+  }
+}
+
+@media (min-width: $md-width) {
+  .div5 {
+    flex-basis: 20%;
+    max-width: 20%;
+  }
+}

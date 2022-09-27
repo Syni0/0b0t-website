@@ -1,0 +1,213 @@
+.tm-container-gallery {
+  height: 320px;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.slick-slider {
+  &.slick-dotted {
+    margin-bottom: 0;
+  }
+}
+
+.slick-dots {
+  bottom: 20px;
+  font-size: 0;
+
+  li {
+    height: 12px;
+    margin: 0 10px;
+    width: 12px;
+
+    button {
+      height: 12px;
+      width: 12px;
+
+      &::before {
+        background-color: color(background);
+        border-radius: 50%;
+        content: "";
+        height: 12px;
+        line-height: 20px;
+        opacity: 65%;
+        position: absolute;
+        top: 0;
+        width: 12px;
+      }
+
+      &:focus,
+      &:hover {
+        &::before {
+          background-color: color(secondary);
+          opacity: 100%;
+        }
+      }
+    }
+
+    &.slick-active button::before {
+      background-color: color(secondary);
+      opacity: 100%;
+    }
+  }
+}
+
+.slick-prev,
+.slick-next {
+  height: 100%;
+  padding: 0 10px;
+  width: auto;
+
+  &:hover,
+  &:focus {
+    background-color: rgba(color(background), 0.45);
+  }
+}
+
+.slick-prev {
+  left: 0;
+  z-index: 20;
+}
+
+.slick-next {
+  right: 0;
+  z-index: 20;
+}
+
+/* Hover Effect */
+
+/* Common style */
+.grid .effect-honey {
+  background: #3085a3;
+  background-position: center;
+  background-size: cover;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+}
+
+.grid .effect-honey img {
+  display: block;
+  max-width: 100%;
+  min-height: 100%;
+  opacity: 80%;
+  position: relative;
+}
+
+.grid .effect-honey .figcaption {
+  backface-visibility: hidden;
+  color: #fff;
+  font-size: 1.25em;
+  padding: 2em;
+  text-transform: uppercase;
+}
+
+.grid .effect-honey .figcaption::before,
+.grid .effect-honey .figcaption::after {
+  pointer-events: none;
+}
+
+.grid .effect-honey .figcaption,
+.grid .effect-honey .figcaption > a {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+/* Anchor will cover the whole item by default */
+
+/* For some effects it will show as a button */
+.grid .effect-honey .figcaption > a {
+  font-size: 0;
+  opacity: 0%;
+  text-indent: 200%;
+  white-space: nowrap;
+  z-index: 1000;
+}
+
+.grid .effect-honey h2 {
+  font-weight: 300;
+  word-spacing: -0.15em;
+}
+
+.grid .effect-honey h2 span {
+  font-weight: 800;
+}
+
+.grid .effect-honey h2,
+.grid .effect-honey p {
+  margin: 0;
+}
+
+.grid .effect-honey p {
+  font-size: 68.5%;
+  letter-spacing: 1px;
+}
+
+/* --------------- */
+
+/***** Honey *****/
+
+/* --------------- */
+
+div.effect-honey {
+  background: #4a3753;
+  background-position: center;
+  background-size: auto;
+  height: 300px;
+  max-width: 100%;
+}
+
+div.effect-honey .overlay {
+  background-color: #0f0;
+  height: 300px;
+  opacity: 0%;
+  transition: opacity 0.35s;
+}
+
+div.effect-honey:hover .overlay {
+  opacity: 30%;
+}
+
+div.effect-honey .figcaption::before {
+  background: #0f0;
+  bottom: 0;
+  content: "";
+  height: 10px;
+  left: 0;
+  position: absolute;
+  transform: translate3d(0, 10px, 0);
+  width: 100%;
+}
+
+div.effect-honey h2 {
+  bottom: 0;
+  left: 0;
+  padding: 1em 1.5em;
+  position: absolute;
+  text-align: left;
+  transform: translate3d(0, -30px, 0);
+  width: 100%;
+}
+
+div.effect-honey h2 i {
+  font-style: normal;
+  opacity: 0%;
+  transform: translate3d(0, -30px, 0);
+  transition: opacity 0.35s, transform 0.35s;
+}
+
+div.effect-honey .figcaption::before,
+div.effect-honey h2 {
+  transition: -webkit-transform 0.35s;
+  transition: transform 0.35s;
+}
+
+div.effect-honey:hover .figcaption::before,
+div.effect-honey:hover h2,
+div.effect-honey:hover h2 i {
+  opacity: 100%;
+  transform: translate3d(0, 0, 0);
+}

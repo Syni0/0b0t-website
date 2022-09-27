@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://0b0t.org/sitemap.xml

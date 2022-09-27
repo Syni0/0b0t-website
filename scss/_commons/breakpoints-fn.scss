@@ -1,0 +1,23 @@
+@use "sass:map";
+
+@function breakpoint-min($name, $breakpoints: $breakpoints) {
+  $min: map.get(map.get($breakpoints, $name), min-width);
+
+  @return if($min != 0, $min, null);
+}
+@function breakpoint-infix($name, $breakpoints: $breakpoints) {
+  @return if(breakpoint-min($name, $breakpoints) == null, "", "-#{$name}");
+}
+
+@mixin media-breakpoint-up($name, $breakpoints: $breakpoints) {
+  $min: breakpoint-min($name, $breakpoints);
+
+  @if $min {
+    @media (min-width: $min) {
+      @content;
+    }
+    /* stylelint-disable-next-line at-rule-empty-line-before */
+  } @else {
+    @content;
+  }
+}

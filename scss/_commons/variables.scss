@@ -1,0 +1,151 @@
+@use "sass:color";
+@use "sass:map";
+
+// Breakpoint
+$xxl-width: 1500px;
+$xl-width: 1320px;
+$lg-width: 1200px;
+$md-width: 992px;
+$sm-width: 768px;
+$xs-width: 480px;
+$xxs-width: 360px;
+$xxl-width-max: 1479px;
+$xl-width-max: 1319px;
+$lg-width-max: 1199px;
+$md-width-max: 991px;
+$sm-width-max: 767px;
+$xs-width-max: 479px;
+$xxs-width-max: 359px;
+$gutter: 30px;
+$breadcrumb-height: 6rem;
+
+// Grid
+$grid-columns: 12;
+$column-width: calc(100 / $grid-columns);
+$breakpoints: (
+  xxs: (
+    container: 100%,
+    container-small: 100%,
+    gutter: 2rem,
+    gutter-ctn: 2rem,
+  ),
+  xs: (
+    container: 100%,
+    container-small: 100%,
+    min-width: $xs-width,
+    gutter: $gutter,
+    gutter-ctn: 2rem,
+  ),
+  sm: (
+    container: 100%,
+    container-small: 100%,
+    min-width: $sm-width,
+    gutter: $gutter,
+    gutter-ctn: 4.5rem,
+  ),
+  md: (
+    container: 100%,
+    container-small: 100%,
+    min-width: $md-width,
+    gutter: $gutter,
+    gutter-ctn: 4.5rem,
+  ),
+  lg: (
+    container: 1170px,
+    container-small: 1170px,
+    min-width: $lg-width,
+    gutter: $gutter,
+    gutter-ctn: 4.5rem,
+  ),
+  xl: (
+    container: 1290px,
+    container-small: 1290px,
+    min-width: $xl-width,
+    gutter: $gutter,
+    gutter-ctn: 4.5rem,
+  ),
+  xxl: (
+    container: 1500px,
+    container-small: 1390px,
+    min-width: $xxl-width,
+    gutter: $gutter,
+    gutter-ctn: 4.5rem,
+  ),
+);
+$colors: (
+  mono: (
+    light: #fff,
+    dark: #1f1f1f,
+  ),
+  primary: (
+    base: #211c28,
+    light: rgba(#211c28, 0.8),
+    dark: color.mix(#211c28, #000, 50%),
+    background: rgba(#211c28, 0.2),
+  ),
+  secondary: (
+    base: #2bff2b,
+  ),
+  grey: (
+    base: #e8e8e8,
+    light: #f5f5f5,
+  ),
+  text: (
+    base: #fff,
+    grey: rgba(166, 173, 186, 100%),
+  ),
+  shadow: (
+    overlay: rgba(0, 0, 0, 50%),
+  ),
+  border: (
+    base: #373d49,
+  ),
+  button: (
+    base: rgb(25, 29, 36),
+    hover: rgb(17, 19, 24),
+    text: rgb(166, 173, 186),
+  ),
+  menu: (
+    base: rgb(25, 29, 36),
+    hover: #434955,
+    active: #00db00,
+  ),
+  background: (
+    base: #2a303c,
+    dark: #1f242d,
+    discord: #4636ff,
+    text: #242933,
+  ),
+);
+
+@function color($color, $tone: "base") {
+  @return map.get(map.get($colors, $color), $tone);
+}
+
+$default: (
+  font-family: (
+    base: "Montserrat",
+    secondary: "Montserrat",
+    icon: "icomoon",
+  ),
+  weight: (
+    base: 400,
+    light: 300,
+    medium: 500,
+    bold: 600,
+  ),
+  radius: (
+    base: 16px,
+    button: 8px,
+  ),
+  line-height: (
+    base: 1.4,
+  ),
+  shadow: (
+    base: 0 0.3rem 0.6rem rgba(0, 0, 0, 16%),
+  ),
+);
+
+@function default($property, $value: "base") {
+  @return map.get(map.get($default, $property), $value);
+}
