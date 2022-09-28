@@ -3,4 +3,16 @@
     <url>
         <loc>https://0b0t.org</loc>
     </url>
+    <url>
+      <loc>https://0b0t.org/about.html</loc>
+   </url>
+   <url>
+      <loc>https://0b0t.org/donation.html</loc>
+   </url>
+   <url>
+      <loc>https://0b0t.org/commands.html</loc>
+   </url>
+   <url>
+      <loc>https://0b0t.org/community.html</loc>
+   </url>
 </urlset>

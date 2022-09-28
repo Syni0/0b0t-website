@@ -109,7 +109,7 @@
                         <h1 class="">Join 0b0t Anarchy Minecraft</h1>
                         <p class="">No Rules, 4years old map ! Join the best anarchy minecraft server !</p>
                     </div>
-                    <button class="btn large scale">How to join</button>
+                    <button class="btn large scale modal-btn" data-target="modal-how-to-join">How to join</button>
                 </div>
             </div>
 
@@ -167,18 +167,50 @@
         <section class="row">
             <div class="xxs12 xs12 md6">
                 <div class="block p32">
-                    <h2 class="h2">Teleportation Commands</h2>
+                    <h2 class="h2">Game Commands</h2>
                     <div class="cmd-line">
-                        <span class="btn">/tpa &ltplayer name&gt</span>
+                        <span class="copy-btn" data-value="/tpa playername"><button class="btn">/tpa &ltplayer name&gt</button></span>
                         <span>send a teleport request to a player</span>
                     </div>
                     <div class="cmd-line">
-                        <span class="btn">/tpy &ltplayer name&gt</span>
+                        <span class="copy-btn" data-value="/tpy playername"><button class="btn">/tpy &ltplayer name&gt</button></span>
                         <span>accept a teleport request</span>
                     </div>
                     <div class="cmd-line">
-                        <span class="btn">/tpn &ltplayer name&gt</span>
+                        <span class="copy-btn" data-value="/tpn playername"><button class="btn">/tpn &ltplayer name&gt</button></span>
                         <span>deny a teleport request</span>
+                    </div>
+                    <div class="cmd-line">
+                        <span class="copy-btn" data-value="/jd playername"><button class="btn">/jd &ltplayer name&gt</button></span>
+                        <span>Player join-date and play-time (online players)</span>
+                    </div>
+                    <div class="cmd-line">
+                        <span class="copy-btn" data-value="/nc color"><button class="btn">/nc &ltcolor&gt</button></span>
+                        <span>Change name color (based on playtime)</span>
+                    </div>
+                    <div class="cmd-line">
+                        <span class="copy-btn" data-value="/kill"><button class="btn">/kill</button></span>
+                        <span>End it</span>
+                    </div>
+                    <div class="cmd-line">
+                        <span class="copy-btn" data-value="/discord link"><button class="btn">/discord link</button></span>
+                        <span>Get linked role on discord</span>
+                    </div>
+                    <div class="cmd-line">
+                        <span class="copy-btn" data-value="/commands"><button class="btn">/commands</button></span>
+                        <span>Display available commands list</span>
+                    </div>
+                    <div class="cmd-line">
+                        <span class="copy-btn" data-value="/dupe"><button class="btn">/dupe</button></span>
+                        <span>Information about duping</span>
+                    </div>
+                    <div class="cmd-line">
+                        <span class="copy-btn" data-value="/pvp"><button class="btn">/pvp</button></span>
+                        <span>PVP settings</span>
+                    </div>
+                    <div class="cmd-line">
+                        <span class="copy-btn" data-value="/specs"><button class="btn">/specs</button></span>
+                        <span>Server specifications</span>
                     </div>
 
                 </div>
@@ -187,24 +219,36 @@
                 <div class="block p32">
                     <h2 class="h2">Communication Commands</h2>
                     <div class="cmd-line">
-                        <span class="btn">/msg &ltplayer name&gt</span>
+                        <span class="copy-btn" data-value="/w playername"><button class="btn">/w &ltplayer name&gt</button></span>
                         <span>message a player</span>
                     </div>
                     <div class="cmd-line">
-                        <span class="btn">/w</span>
-                        <span>alias for /msg</span>
-                    </div>
-                    <div class="cmd-line">
-                        <span class="btn">/reply</span>
+                        <span class="copy-btn" data-value="/r"><button class="btn">/r</button></span>
                         <span>reply to the last player who messaged you</span>
                     </div>
                     <div class="cmd-line">
-                        <span class="btn">/r</span>
-                        <span>alias for /reply</span>
+                        <span class="copy-btn" data-value="/l"><button class="btn">/l</button></span>
+                        <span>message the last player you messaged</span>
                     </div>
                     <div class="cmd-line">
-                        <span class="btn">/last</span>
-                        <span>message the last player you messaged</span>
+                        <span class="copy-btn" data-value="/ignore playername"><button class="btn">/ignore &ltplayer name&gt</button></span>
+                        <span>Toggle ignore status</span>
+                    </div>
+                    <div class="cmd-line">
+                        <span class="copy-btn" data-value="/unignoreall"><button class="btn">/unignoreall</button></span>
+                        <span>Clear ignore list</span>
+                    </div>
+                    <div class="cmd-line">
+                        <span class="copy-btn" data-value="/togglechat"><button class="btn">/togglechat</button></span>
+                        <span>Toggle chat display</span>
+                    </div>
+                    <div class="cmd-line">
+                        <span class="copy-btn" data-value="/toggletells"><button class="btn">/toggletells</button></span>
+                        <span>Toggle tells display</span>
+                    </div>
+                    <div class="cmd-line">
+                        <span class="copy-btn" data-value="/toggledeathmsg"><button class="btn">/toggledeathmsg</button></span>
+                        <span>Toggle death messages display</span>
                     </div>
 
                 </div>
@@ -245,6 +289,50 @@
         <p class="text-center small copyright">&copy; 0b0t.org - Made by Synio <img src="img/synio-head.gif" alt="Synio"></p>
 
     </div>
+
+    <div class="modal modal-how-to-join">
+        <div class="block p32">
+            <h2 class="h2">Ways to play</h2>
+            <p class="text-white">Join other players on 0b0t.org now!</p>
+
+            <h3 class="line-title">Minecraft for PC</h3>
+            <div class="flex-gap">
+                <div class="bg-text">
+                    <div class="ml8">
+                        <div>Java Edition</div>
+                        <div class="small-text">0b0t.org:25565</div>
+                    </div>
+                    <span class="copy-btn" data-value="0b0t.org:25565"><button class="btn">Copy ip</button></span>
+                </div>
+                <div class="bg-text">
+                    <div class="ml8">
+                        <div>Windows 10</div>
+                        <div class="small-text">bedrock.0b0t.org:19132</div>
+                    </div>
+                    <span class="copy-btn" data-value="bedrock.0b0t.org:19132"><button class="btn">Copy ip</button></span>
+                </div>
+            </div>
+
+            <h3 class="line-title">Minecraft for Console</h3>
+            <div class="flex-gap">
+                <div class="bg-text">
+                    <div class="ml8">
+                        <div>Bedrock Edition</div>
+                        <div class="small-text">bedrock.0b0t.org:25565</div>
+                    </div>
+                    <span class="copy-btn" data-value="bedrock.0b0t.org:25565"><button class="btn">Copy ip</button></span>
+                </div>
+                <div class="bg-text">
+                    <div class="ml8">
+                        <div>Mobile</div>
+                        <div class="small-text">bedrock.0b0t.org:19132</div>
+                    </div>
+                    <span class="copy-btn" data-value="bedrock.0b0t.org:19132"><button class="btn">Copy ip</button></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="js/jquery-1.9.1.min.js"></script>    
     <script src="js/project.js" type="text/javascript"></script>
 </body>

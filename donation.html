@@ -109,7 +109,7 @@
                         <h1 class="">Join 0b0t Anarchy Minecraft</h1>
                         <p class="">No Rules, 4years old map ! Join the best anarchy minecraft server !</p>
                     </div>
-                    <button class="btn large scale">How to join</button>
+                    <button class="btn large scale modal-btn" data-target="modal-how-to-join">How to join</button>
                 </div>
             </div>
         </section>
@@ -131,7 +131,7 @@
                     <form class="card fluid shadow-box" action="https://www.paypal.com/donate" method="post" target="_top" style="line-height:0;">
                         <input type="hidden" name="hosted_button_id" value="CFTY7UEX6AST2"/>
                         <input width="100%" type="image" class="qr-code" src="img/qr_paypal.svg" border="0" name="submit"
-                               title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" style="line-height:0; background: #a6adba;"/>
+                               title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" style="line-height:0;"/>
                     </form>
                 </div>
             </div>
@@ -139,7 +139,7 @@
                 <div class="block p32">
                     <h2 class="h2">Bitcoin</h2>
                     <p class="hint">Scan or click the QR code</p>
-                    <a class="qr-code" href="bitcoin:bc1qmxprtnqvq8wlrwppxg3z4x07ftatcamc5sx6vl?message=0b0t.org%20Donation" style="line-height:0; display: block;background: #a6adba;"><img
+                    <a class="qr-code" href="bitcoin:bc1qmxprtnqvq8wlrwppxg3z4x07ftatcamc5sx6vl?message=0b0t.org%20Donation" style="line-height:0; display: block;"><img
                         width="100%" src="img/qr_bitcoin.svg" alt="Bitcoin QR-Code"
                         title="Bitcoin - In cryptography we trust!"/></a>
                 </div>
@@ -180,6 +180,50 @@
         <p class="text-center small copyright">&copy; 0b0t.org - Design: Synio <img src="img/synio-head.gif" alt="Synio"></p>
 
     </div>
+
+    <div class="modal modal-how-to-join">
+        <div class="block p32">
+            <h2 class="h2">Ways to play</h2>
+            <p class="text-white">Join other players on 0b0t.org now!</p>
+
+            <h3 class="line-title">Minecraft for PC</h3>
+            <div class="flex-gap">
+                <div class="bg-text">
+                    <div class="ml8">
+                        <div>Java Edition</div>
+                        <div class="small-text">0b0t.org:25565</div>
+                    </div>
+                    <span class="copy-btn" data-value="0b0t.org:25565"><button class="btn">Copy ip</button></span>
+                </div>
+                <div class="bg-text">
+                    <div class="ml8">
+                        <div>Windows 10</div>
+                        <div class="small-text">bedrock.0b0t.org:19132</div>
+                    </div>
+                    <span class="copy-btn" data-value="bedrock.0b0t.org:19132"><button class="btn">Copy ip</button></span>
+                </div>
+            </div>
+
+            <h3 class="line-title">Minecraft for Console</h3>
+            <div class="flex-gap">
+                <div class="bg-text">
+                    <div class="ml8">
+                        <div>Bedrock Edition</div>
+                        <div class="small-text">bedrock.0b0t.org:25565</div>
+                    </div>
+                    <span class="copy-btn" data-value="bedrock.0b0t.org:25565"><button class="btn">Copy ip</button></span>
+                </div>
+                <div class="bg-text">
+                    <div class="ml8">
+                        <div>Mobile</div>
+                        <div class="small-text">bedrock.0b0t.org:19132</div>
+                    </div>
+                    <span class="copy-btn" data-value="bedrock.0b0t.org:19132"><button class="btn">Copy ip</button></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="js/jquery-1.9.1.min.js"></script>
     <script src="js/project.js" type="text/javascript"></script>
 </body>

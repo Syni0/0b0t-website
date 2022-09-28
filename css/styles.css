@@ -2338,6 +2338,7 @@ p {
   justify-content: flex-start;
 }
 .cmd-line .btn {
+  font-size: 16px;
   font-weight: 400;
   line-height: 1;
   padding: 4px;
@@ -2371,6 +2372,68 @@ p {
 .player img {
   height: 16px;
   margin-right: 5px;
+}
+
+.qr-code {
+  background-color: rgb(166, 173, 186);
+  transition: all 0.3s ease-in-out;
+}
+.qr-code:hover {
+  background-color: #2bff2b;
+}
+
+.modal {
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  height: 100vh;
+  justify-content: center;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+.modal.open {
+  display: flex;
+}
+.modal .block {
+  height: auto;
+  min-width: 80%;
+}
+@media (min-width: 992px) {
+  .modal .block {
+    min-width: 50%;
+  }
+}
+
+.copy-btn {
+  position: relative;
+}
+.copy-btn::before {
+  background-color: rgb(17, 19, 24);
+  border-radius: 4px;
+  color: rgb(166, 173, 186);
+  content: "Click to copy!";
+  display: block;
+  font-size: 12px;
+  height: 28px;
+  left: 50%;
+  opacity: 0%;
+  padding: 4px 8px;
+  pointer-events: none;
+  position: absolute;
+  top: -32px;
+  transform: translateX(-50%);
+  transition: all 0.2s ease-in-out;
+  white-space: nowrap;
+  z-index: 2;
+}
+.copy-btn.hover::before {
+  opacity: 100%;
+  transition: none;
+}
+.copy-btn.copied::before {
+  content: "Copied!";
 }
 
 .logo {
@@ -2840,7 +2903,7 @@ p {
 }
 
 .tm-container-gallery {
-  height: 320px;
+  height: 420px;
   max-width: 100%;
   overflow: hidden;
 }
@@ -2982,7 +3045,7 @@ div.effect-honey {
   background: #4a3753;
   background-position: center;
   background-size: auto;
-  height: 300px;
+  height: 400px;
   max-width: 100%;
 }
 

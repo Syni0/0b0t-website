@@ -216,6 +216,7 @@ p {
   justify-content: flex-start;
 
   .btn {
+    font-size: 16px;
     font-weight: default(weight);
     line-height: 1;
     padding: 4px;
@@ -256,5 +257,76 @@ p {
   img {
     height: 16px;
     margin-right: 5px;
+  }
+}
+
+.qr-code {
+  background-color: color(text, grey);
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    background-color: color(secondary);
+  }
+}
+
+.modal {
+  align-items: center;
+  background-color: color(shadow, overlay);
+  display: none;
+  height: 100vh;
+  justify-content: center;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+
+  &.open {
+    display: flex;
+  }
+
+  .block {
+    height: auto;
+    min-width: 80%;
+
+    @media (min-width: $md-width) {
+      min-width: 50%;
+    }
+  }
+}
+
+.copy-btn {
+  position: relative;
+
+  &::before {
+    background-color: color(button, hover);
+    border-radius: 4px;
+    color: color(text, grey);
+    content: "Click to copy!";
+    display: block;
+    font-size: 12px;
+    height: 28px;
+    left: 50%;
+    opacity: 0%;
+    padding: 4px 8px;
+    pointer-events: none;
+    position: absolute;
+    top: -32px;
+    transform: translateX(-50%);
+    transition: all 0.2s ease-in-out;
+    white-space: nowrap;
+    z-index: 2;
+  }
+
+  &.hover {
+    &::before {
+      opacity: 100%;
+      transition: none;
+    }
+  }
+
+  &.copied {
+    &::before {
+      content: "Copied!";
+    }
   }
 }

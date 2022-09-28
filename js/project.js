@@ -7,6 +7,19 @@ $(function () {
     $('.navbar-toggler').on('click', function () {
         $('body').addClass('nav-open');
     })
+
+    $('.modal-btn').on('click', function () {
+        let target = $(this).data('target')
+        $('.'+target).addClass('open')
+    })
+
+    $('.modal').on('click', function () {
+        $('.modal').removeClass('open')
+    })
+
+    $('.modal .block').on('click', function (e) {
+        e.stopImmediatePropagation()
+    })
     
     $(document).on('click', function (e) {
         if($(e.target).parents('.navbar').length > 0 || $(e.target).parents('.navbar-toggler').length > 0 || $(e.target).hasClass('navbar-toggler')) {
@@ -37,4 +50,29 @@ $(function () {
     $('.question .title').on('click', function () {
         $(this).parent().toggleClass('open');
     })
+    
+    $('.copy-btn').on('click', function () {
+        let text = $(this).data('value')
+        copyToClipboard(text)
+        $(this).addClass('copied')
+    })
+
+    $('.copy-btn').on('mouseover', function () {
+        $(this).addClass('hover')
+    })
+    $('.copy-btn').on('mouseleave', function () {
+        $(this).removeClass('hover copied')
+    })
+
+    function copyToClipboard(text) {
+        var $temp = $("<input>");
+        $("body").append($temp);
+        $temp.val(text)[0].select();
+        $temp[0].setSelectionRange(0, 99999);
+        // document.execCommand("copy");
+
+        navigator.clipboard.writeText($temp[0].value);
+
+        $temp.remove();
+      }
 });

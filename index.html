@@ -110,7 +110,7 @@
                         <h1 class="">Join 0b0t Anarchy Minecraft</h1>
                         <p class="">No Rules, 4years old map ! Join the best anarchy minecraft server !</p>
                     </div>
-                    <button class="btn large scale">How to join</button>
+                    <button class="btn large scale modal-btn" data-target="modal-how-to-join">How to join</button>
                 </div>
             </div>
 
@@ -235,14 +235,14 @@
                                 <div>Java Edition</div>
                                 <div class="small-text">0b0t.org:25565</div>
                             </div>
-                            <span class="copy-btn"><button class="btn">Copy ip</button></span>
+                            <span class="copy-btn" data-value="0b0t.org:25565"><button class="btn">Copy ip</button></span>
                         </div>
                         <div class="bg-text">
                             <div class="ml8">
                                 <div>Windows 10</div>
                                 <div class="small-text">bedrock.0b0t.org:19132</div>
                             </div>
-                            <span class="copy-btn"><button class="btn">Copy ip</button></span>
+                            <span class="copy-btn" data-value="bedrock.0b0t.org:19132"><button class="btn">Copy ip</button></span>
                         </div>
                     </div>
 
@@ -253,14 +253,14 @@
                                 <div>Bedrock Edition</div>
                                 <div class="small-text">bedrock.0b0t.org:25565</div>
                             </div>
-                            <span class="copy-btn"><button class="btn">Copy ip</button></span>
+                            <span class="copy-btn" data-value="bedrock.0b0t.org:25565"><button class="btn">Copy ip</button></span>
                         </div>
                         <div class="bg-text">
                             <div class="ml8">
                                 <div>Mobile</div>
                                 <div class="small-text">bedrock.0b0t.org:19132</div>
                             </div>
-                            <span class="copy-btn"><button class="btn">Copy ip</button></span>
+                            <span class="copy-btn" data-value="bedrock.0b0t.org:19132"><button class="btn">Copy ip</button></span>
                         </div>
                     </div>
                 </div>
@@ -270,9 +270,18 @@
 
                 <div class="tm-gallery-container block">
                     <div class="grid tm-gallery">
-                        <a href="img/slider/render.jpg">
+                        <a href="img/slider/Etron2.png">
                             <div class="effect-honey tm-gallery-item"
-                                style="background-image: url('img/slider/render.jpg');">
+                                style="background-image: url('img/slider/Etron2.png');">
+                                <div class="overlay"></div>
+                                <div class="figcaption">
+                                    <h2><i>Etron <span>Base</span> Now</i></h2>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="img/slider/spawn-370.png">
+                            <div class="effect-honey tm-gallery-item"
+                                style="background-image: url('img/slider/spawn-370.png');">
                                 <div class="overlay"></div>
                                 <div class="figcaption">
                                     <h2><i>0b0t <span>Spawn</span> Render</i></h2>
@@ -297,15 +306,6 @@
                                 </div>
                             </div>
                         </a>
-                        <a href="img/slider/Etron2.png">
-                            <div class="effect-honey tm-gallery-item"
-                                style="background-image: url('img/slider/Etron2.png');">
-                                <div class="overlay"></div>
-                                <div class="figcaption">
-                                    <h2><i>Etron <span>Base</span> Now</i></h2>
-                                </div>
-                            </div>
-                        </a>
                         <a href="img/slider/2021-11-09_22.51.25.png">
                             <div class="effect-honey tm-gallery-item"
                                 style="background-image: url('img/slider/2021-11-09_22.51.25.png');">
@@ -315,9 +315,9 @@
                                 </div>
                             </div>
                         </a>
-                        <a href="img/slider/spawn-370.png">
+                        <a href="img/slider/render.jpg">
                             <div class="effect-honey tm-gallery-item"
-                                style="background-image: url('img/slider/spawn-370.png');">
+                                style="background-image: url('img/slider/render.jpg');">
                                 <div class="overlay"></div>
                                 <div class="figcaption">
                                     <h2><i>0b0t <span>Spawn</span> Render</i></h2>
@@ -364,6 +364,50 @@
         <p class="text-center small copyright">&copy; 0b0t.org - Made by Synio <img src="img/synio-head.gif" alt="Synio"></p>
 
     </div>
+
+    <div class="modal modal-how-to-join">
+        <div class="block p32">
+            <h2 class="h2">Ways to play</h2>
+            <p class="text-white">Join other players on 0b0t.org now!</p>
+
+            <h3 class="line-title">Minecraft for PC</h3>
+            <div class="flex-gap">
+                <div class="bg-text">
+                    <div class="ml8">
+                        <div>Java Edition</div>
+                        <div class="small-text">0b0t.org:25565</div>
+                    </div>
+                    <span class="copy-btn" data-value="0b0t.org:25565"><button class="btn">Copy ip</button></span>
+                </div>
+                <div class="bg-text">
+                    <div class="ml8">
+                        <div>Windows 10</div>
+                        <div class="small-text">bedrock.0b0t.org:19132</div>
+                    </div>
+                    <span class="copy-btn" data-value="bedrock.0b0t.org:19132"><button class="btn">Copy ip</button></span>
+                </div>
+            </div>
+
+            <h3 class="line-title">Minecraft for Console</h3>
+            <div class="flex-gap">
+                <div class="bg-text">
+                    <div class="ml8">
+                        <div>Bedrock Edition</div>
+                        <div class="small-text">bedrock.0b0t.org:25565</div>
+                    </div>
+                    <span class="copy-btn" data-value="bedrock.0b0t.org:25565"><button class="btn">Copy ip</button></span>
+                </div>
+                <div class="bg-text">
+                    <div class="ml8">
+                        <div>Mobile</div>
+                        <div class="small-text">bedrock.0b0t.org:19132</div>
+                    </div>
+                    <span class="copy-btn" data-value="bedrock.0b0t.org:19132"><button class="btn">Copy ip</button></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="js/jquery-1.9.1.min.js"></script>
     <script src="lib/slick/slick.min.js"></script>
     <script src="lib/magnific-popup/jquery.magnific-popup.min.js"></script>

@@ -109,7 +109,7 @@
                         <h1 class="">Join 0b0t Anarchy Minecraft</h1>
                         <p class="">No Rules, 4years old map ! Join the best anarchy minecraft server !</p>
                     </div>
-                    <button class="btn large scale">How to join</button>
+                    <button class="btn large scale modal-btn" data-target="modal-how-to-join">How to join</button>
                 </div>
             </div>
 
@@ -165,16 +165,10 @@
         </section>
 
         <section class="row">
-            <div class="xxs12 xs12 md6 lg8">
+            <div class="xxs12 xs12">
                 <div class="block p32">
                     <h2 class="h2">Players count</h2>
                     <div id="plot" data-height="400"></div>
-                </div>
-            </div>
-            
-            <div class="xxs12 xs12 md6 lg4">
-                <div class="block p32">
-                    <iframe src="https://discord.com/widget?id=895546064260718622&theme=dark" width="100%" height="400" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
                 </div>
             </div>
 
@@ -220,6 +214,50 @@
         <p class="text-center small copyright">&copy; 0b0t.org - Made by Synio <img src="img/synio-head.gif" alt="Synio"></p>
 
     </div>
+
+    <div class="modal modal-how-to-join">
+        <div class="block p32">
+            <h2 class="h2">Ways to play</h2>
+            <p class="text-white">Join other players on 0b0t.org now!</p>
+
+            <h3 class="line-title">Minecraft for PC</h3>
+            <div class="flex-gap">
+                <div class="bg-text">
+                    <div class="ml8">
+                        <div>Java Edition</div>
+                        <div class="small-text">0b0t.org:25565</div>
+                    </div>
+                    <span class="copy-btn" data-value="0b0t.org:25565"><button class="btn">Copy ip</button></span>
+                </div>
+                <div class="bg-text">
+                    <div class="ml8">
+                        <div>Windows 10</div>
+                        <div class="small-text">bedrock.0b0t.org:19132</div>
+                    </div>
+                    <span class="copy-btn" data-value="bedrock.0b0t.org:19132"><button class="btn">Copy ip</button></span>
+                </div>
+            </div>
+
+            <h3 class="line-title">Minecraft for Console</h3>
+            <div class="flex-gap">
+                <div class="bg-text">
+                    <div class="ml8">
+                        <div>Bedrock Edition</div>
+                        <div class="small-text">bedrock.0b0t.org:25565</div>
+                    </div>
+                    <span class="copy-btn" data-value="bedrock.0b0t.org:25565"><button class="btn">Copy ip</button></span>
+                </div>
+                <div class="bg-text">
+                    <div class="ml8">
+                        <div>Mobile</div>
+                        <div class="small-text">bedrock.0b0t.org:19132</div>
+                    </div>
+                    <span class="copy-btn" data-value="bedrock.0b0t.org:19132"><button class="btn">Copy ip</button></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="js/jquery-1.9.1.min.js"></script>
 
     <script src="https://cdn.plot.ly/plotly-2.6.4.min.js" type="text/javascript"></script>
